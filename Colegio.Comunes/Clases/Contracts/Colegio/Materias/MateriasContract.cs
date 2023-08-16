@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-namespace Colegio.Comunes.Clases.Contracts.Colegio.Materias
+﻿namespace Colegio.Comunes.Clases.Contracts.Colegio.Materias
 {
     public class MateriasContract
     {

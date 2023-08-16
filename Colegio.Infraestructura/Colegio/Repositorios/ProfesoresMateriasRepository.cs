@@ -1,11 +1,6 @@
 ﻿using Colegio.Infraestructura.Database.Contexto;
 using Colegio.Infraestructura.Database.Entidades.ProfesoresMaterias;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Colegio.Infraestructura.Colegio.Repositorios
 {
@@ -39,7 +34,6 @@ namespace Colegio.Infraestructura.Colegio.Repositorios
         {
             return await _context.Profesoresmaterias.FindAsync(id);
         }
-
         public async Task<ProfesorMateriaEntities> Update(ProfesorMateriaEntities entity)
         {
             _context.Profesoresmaterias.Update(entity);

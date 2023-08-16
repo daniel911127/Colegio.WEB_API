@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="NetCore.AutoRegisterDi" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Colegio.Comunes\Colegio.Comunes.csproj" />
+    <ProjectReference Include="..\Colegio.Infraestructura\Colegio.Infraestructura.csproj" />
+  </ItemGroup>
+
 </Project>

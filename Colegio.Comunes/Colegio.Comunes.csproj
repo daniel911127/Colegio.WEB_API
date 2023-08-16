@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Clases\Constants\" />
     <Folder Include="Clases\Enums\" />
     <Folder Include="Clases\Helpers\" />
   </ItemGroup>

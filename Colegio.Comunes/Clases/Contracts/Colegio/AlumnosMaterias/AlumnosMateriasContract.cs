@@ -1,6 +1,6 @@
 ﻿namespace Colegio.Comunes.Clases.Contracts.Colegio.AlumnosMaterias
 {
-    public class AlumnosMateriaContract
+    public class AlumnosMateriasContract
     {
         public int id { get; set; }
         public int identificacion_alumno { get; set; }
