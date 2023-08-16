@@ -11,6 +11,17 @@ builder.Services.AddSwaggerGen();
 
 Register.Configuracion(builder.Services, builder.Configuration);
 
+var proveedor = builder.Services.BuildServiceProvider();
+var configuration = proveedor.GetRequiredService<IConfiguration>();
+builder.Services.AddCors(opciones =>
+{
+    var frontendURL=configuration.GetValue<string>("frontend_url");
+    opciones.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://127.0.0.1:5173").AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

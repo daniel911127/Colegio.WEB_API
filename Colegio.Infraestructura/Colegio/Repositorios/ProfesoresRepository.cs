@@ -21,7 +21,7 @@ namespace Colegio.Infraestructura.Colegio.Repositorios
 
         public async Task<bool> DeleteById(int identificacion)
         {
-            _context.Remove(identificacion);
+            _context.Remove(await GetById(identificacion));
             return await _context.SaveChangesAsync() > 0 ? true : false;
         }
 
