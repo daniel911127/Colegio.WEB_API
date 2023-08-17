@@ -18,7 +18,7 @@ builder.Services.AddCors(opciones =>
     var frontendURL=configuration.GetValue<string>("frontend_url");
     opciones.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://127.0.0.1:5173").AllowAnyMethod().AllowAnyHeader();
+        builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
     });
 });
 

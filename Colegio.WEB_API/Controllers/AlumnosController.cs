@@ -36,7 +36,7 @@ namespace Colegio.WEB_API.Controllers
             }
             return BadRequest();
         }
-        [HttpPut]
+        [HttpPost]
         [Route("[Action]")]
         public async Task<IActionResult> Update(AlumnosContract contract)
         {
