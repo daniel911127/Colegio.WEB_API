@@ -66,8 +66,8 @@ namespace Colegio.Dominio.Services.Colegio.ProfesoresMaterias
             ProfesorMateriaEntities profesormateriaEntities = await _crudRepository.GetById(contract.id);
             if (profesormateriaEntities != null)
             {      
-                profesormateriaEntities.identificacion_profesor = profesormateriaEntities.identificacion_profesor;
-                profesormateriaEntities.codigo_materia = profesormateriaEntities.identificacion_profesor;
+                profesormateriaEntities.identificacion_profesor = contract.identificacion_profesor;
+                profesormateriaEntities.codigo_materia = contract.codigo_materia;
                 profesormateriaEntities = await _crudRepository.Update(profesormateriaEntities);
                 return _mapper.Map<ProfesoresMateriasContract>(profesormateriaEntities);
             }
